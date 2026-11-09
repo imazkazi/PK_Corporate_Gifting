@@ -47,9 +47,9 @@ const CATEGORIES = {
    Put photos in the images/ folder. If a photo is missing, an emoji shows instead.
    "category" must match one of the names in CATEGORIES above. */
 const products = [
-  { id: 1,  name: "Premium Chocolate Box", category: "Chocolates & Sweets", price: 250, image: "images/Premium_Chocolate_Box.jpg", description: "Premium assorted chocolate collection" },
-  { id: 2,  name: "Truffle Assortment", category: "Chocolates & Sweets", price: 320, image: "images/Truffle_Assortment.jpg", description: "Hand-rolled cocoa truffles in six flavours" },
-  { id: 3,  name: "Mithai Gift Pack", category: "Chocolates & Sweets", price: 450, image: "images/mithai.jpg", description: "Classic Indian sweets, freshly packed" },
+  { id: 1,  name: "Premium Chocolate Box", category: "Chocolates & Sweets", price: 250, image: "Images/Premium_Chocolate_Box.jpg", description: "Premium assorted chocolate collection" },
+  { id: 2,  name: "Truffle Assortment", category: "Chocolates & Sweets", price: 320, image: "Images/Truffle_Assortment.jpg", description: "Hand-rolled cocoa truffles in six flavours" },
+  { id: 3,  name: "Mithai Gift Pack", category: "Chocolates & Sweets", price: 450, image: "Images/mithai.jpg", description: "Classic Indian sweets, freshly packed" },
   { id: 4,  name: "Mithai Gift Pack", category: "Chocolates & Sweets", price: 450, image: "images/mithai.jpg", description: "Classic Indian sweets, freshly packed" },
   { id: 5,  name: "Mithai Gift Pack", category: "Chocolates & Sweets", price: 450, image: "images/mithai.jpg", description: "Classic Indian sweets, freshly packed" },
   { id: 6,  name: "Mithai Gift Pack", category: "Chocolates & Sweets", price: 450, image: "images/mithai.jpg", description: "Classic Indian sweets, freshly packed" },
