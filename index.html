@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>People Konnect – Corporate Gifting, Made Personal.</title>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- A. NAVIGATION -->
+<header class="nav">
+
+  <a href="#home" class="brand">
+    <img src="images/Logo.gif" alt="People Konnect Logo" class="brand-logo">
+  </a>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#products">Explore Products</a>
+    <a href="#builder">Build Your Gift Box</a>
+    <a href="#how">How It Works</a>
+    <a href="#quote">Contact Us</a>
+  </nav>
+
+  <!-- Social Media Links -->
+  <div class="social-links">
+    <a href="https://www.linkedin.com/company/people-konnect-/posts/?feedView=all"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/YOUR-PAGE/"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <a href="#builder" class="cart-btn" aria-label="Cart">
+    🛍 <span id="navCount">0</span>
+  </a>
+
+</header>
+
+
+<main>
+
+<!-- B. HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-text">
+    <h1>Corporate Gifting, Made Personal.</h1>
+
+    <p class="tagline">Create. Customise. Celebrate.</p>
+
+    <p>
+      Create thoughtful gift collections for your employees, clients and business partners.
+      Choose your products, customise your collection and instantly calculate your bulk gifting budget.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-gold">Explore Products</a>
+      <a href="#builder" class="btn btn-outline">Build Your Gift Box</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="images/hero.jpg" alt="Corporate gifting hamper" onerror="this.remove()">
+    <div class="hero-fallback">🎁</div>
+  </div>
+
+</section>
+
+
+<!-- C. CATEGORIES AND PRODUCTS -->
+<section class="section" id="products">
+
+  <h2>Explore Products</h2>
+
+  <p class="section-sub">
+    Pick a category or search by name, then add items to your gift collection.
+  </p>
+
+  <div class="cat-bar" id="categoryBar"></div>
+
+  <div class="search-row">
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search products by name…"
+      aria-label="Search products"
+    >
+    <span id="productCount" class="count"></span>
+  </div>
+
+  <div class="grid" id="productGrid"></div>
+
+</section>
+
+
+<!-- D. GIFT BOX BUILDER -->
+<section class="section builder-wrap" id="builder">
+
+  <h2>Build Your Gift Box</h2>
+
+  <p class="section-sub">
+    Step 1: choose what goes into <strong>one</strong> gift box.
+    Step 2: choose <strong>how many boxes</strong> you need.
+  </p>
+
+  <div class="builder">
+
+    <div class="panel">
+
+      <div class="panel-head">
+        <h3>Step 1 · Items in one gift box</h3>
+        <button class="link-btn" id="clearCart">Clear cart</button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="row total-row">
+        <span>Price of one gift box</span>
+        <strong id="boxTotal">₹0</strong>
+      </div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <h3>Step 2 · Number of gift boxes</h3>
+
+      <div class="qty-presets" id="presets"></div>
+
+      <label for="bulkQty" class="lbl">
+        Or enter a custom quantity
+      </label>
+
+      <input type="number" id="bulkQty" min="1" step="1" value="100">
+
+      <div class="summary">
+
+        <div class="row">
+          <span>Products in one gift box</span>
+          <strong id="sProducts">0</strong>
+        </div>
+
+        <div class="row">
+          <span>Original price per gift box</span>
+          <strong id="sOriginal">₹0</strong>
+        </div>
+
+        <div class="row">
+          <span>Bulk discount</span>
+          <strong id="sDiscount">0%</strong>
+        </div>
+
+        <div class="row">
+          <span>Discounted price per gift box</span>
+          <strong id="sDiscounted">₹0</strong>
+        </div>
+
+        <div class="row">
+          <span>Total gift boxes</span>
+          <strong id="sBoxes">0</strong>
+        </div>
+
+        <div class="row grand">
+          <span>Total estimated bulk order cost</span>
+          <strong id="sTotal">₹0</strong>
+        </div>
+
+      </div>
+
+      <p class="note">
+        Prices are indicative and subject to final confirmation based on bulk quantity,
+        customisation, GST and delivery.
+      </p>
+
+      <a href="#quote" class="btn btn-gold full">Get a Quote</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- E. HOW IT WORKS -->
+<section class="section" id="how">
+
+  <h2>How It Works</h2>
+
+  <ol class="steps">
+
+    <li>
+      <strong>Browse</strong>
+      <span>Explore chocolates, dry fruits, drinkware, stationery and more.</span>
+    </li>
+
+    <li>
+      <strong>Build</strong>
+      <span>Add items to one gift box and set how many of each.</span>
+    </li>
+
+    <li>
+      <strong>Choose quantity</strong>
+      <span>Pick 100, 250, 500, 1,000 or your own number of boxes.</span>
+    </li>
+
+    <li>
+      <strong>Request a quote</strong>
+      <span>Send your collection to us and we confirm final pricing.</span>
+    </li>
+
+  </ol>
+
+</section>
+
+
+<!-- F. GET A QUOTE -->
+<section class="section quote-wrap" id="quote">
+
+  <h2>Get a Quote</h2>
+
+  <p class="section-sub">
+    Tell us about your order. This prototype shows a summary on screen; nothing is sent.
+  </p>
+
+  <form id="quoteForm" class="form">
+
+    <label>
+      Customer name
+      <input name="name" required>
+    </label>
+
+    <label>
+      Company name
+      <input name="company" required>
+    </label>
+
+    <label>
+      Business email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>
+      Contact number
+      <input type="tel" name="phone" required>
+    </label>
+
+    <label>
+      Delivery city
+      <input name="city" required>
+    </label>
+
+    <label>
+      Required delivery date
+      <input type="date" name="date" required>
+    </label>
+
+    <label>
+      Bulk quantity
+      <input type="number" name="qty" id="formQty" min="1" required>
+    </label>
+
+    <label class="wide">
+      Additional requirements
+      <textarea name="notes" rows="3"></textarea>
+    </label>
+
+    <div class="wide form-actions">
+
+      <button type="submit" class="btn btn-gold">
+        Request Bulk Quotation
+      </button>
+
+      <button type="button" class="btn btn-outline-dark" id="waBtn">
+        Enquire on WhatsApp
+      </button>
+
+    </div>
+
+  </form>
+
+  <div id="quoteResult" class="quote-result" hidden></div>
+
+</section>
+
+</main>
+
+
+<!-- G. FOOTER -->
+<footer class="footer">
+
+  <strong>PEOPLE KONNECT</strong> · Create. Customise. Celebrate.
+
+  <p>
+    Prices are indicative and subject to final confirmation based on bulk quantity,
+    customisation, GST and delivery.
+  </p>
+
+</footer>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
